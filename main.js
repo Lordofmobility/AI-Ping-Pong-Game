@@ -20,12 +20,22 @@ var ball = {
 
 function setup(){
   var canvas =  createCanvas(700,600);
+  video = createCapture(VIDEO);
+  video.size(700, 600);
+  video.hide()
+
+  posenet = ml5.poseNet(video, modelLoaded)
 }
 
+function modelLoaded() {
+  console.log("Model successfully Loaded.");
+}
 
 function draw(){
 
- background(0); 
+ video.parent("canvas")
+ 
+  background(0); 
 
  fill("black");
  stroke("black");
@@ -159,3 +169,5 @@ function paddleInCanvas(){
     mouseY =0;
   }  
 }
+
+
