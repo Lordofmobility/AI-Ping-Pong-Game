@@ -28,6 +28,7 @@ var ball = {
 
 function setup() {
   var canvas = createCanvas(700, 600);
+  video.parent("canvas")
   video = createCapture(VIDEO);
   video.size(700, 600);
   video.hide()
@@ -49,9 +50,8 @@ function gotResult(results) {
 }
 
 function draw() {
-
-  video.parent("canvas")
-
+  image(video, 0, 0, 700, 600)
+  
   if (rightWristscore > 0.2) {
     fill(255, 0, 0)
     stroke(255, 0, 0)
