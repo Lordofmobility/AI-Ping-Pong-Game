@@ -24,3 +24,13 @@ canvas {
     border-radius: 10px;
     border: 10px solid white;
 }
+
+.copy_right_footer {
+    position: fixed;
+    bottom: 0;
+    background-color: grey;
+    color: white;
+    width: 100%;
+    text-align: center;
+    line-height: 3;
+}
